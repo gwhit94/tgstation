@@ -9,6 +9,7 @@
 	icon = 'icons/obj/singularity.dmi'
 	icon_state = "emitter"
 
+	anchored = FALSE
 	density = TRUE
 	req_access = list(ACCESS_ENGINE_EQUIP)
 	circuit = /obj/item/circuitboard/machine/emitter
@@ -42,6 +43,13 @@
 	var/manual = FALSE
 	var/charge = 0
 	var/last_projectile_params
+
+
+/obj/machinery/power/emitter/anchored
+	anchored = TRUE
+
+/obj/machinery/power/emitter/state
+	state = EMITTER_WRENCHED
 
 /obj/machinery/power/emitter/ctf
 	name = "Energy Cannon"
